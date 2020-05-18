@@ -1,0 +1,6 @@
+@import url(./_one/popup__required-form_one.css);
+.popup__required-form {
+    color: teal;
+    font-size: 12px;
+    display: none;
+}

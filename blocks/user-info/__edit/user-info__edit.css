@@ -1,0 +1,16 @@
+.user-info__edit {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    font-size: 30px;
+    display: block;
+    cursor: pointer;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0 20px;
+}

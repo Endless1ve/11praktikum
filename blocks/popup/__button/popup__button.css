@@ -1,0 +1,7 @@
+@import url(./_one/popup__button_one.css);
+@import url(./_two/popup__button_two.css);
+.popup__button {
+    width: 100%;
+    height: 50px;
+    margin-top: 48px;
+}
