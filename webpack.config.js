@@ -5,7 +5,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackMd5Hash = require('webpack-md5-hash');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const isDev = process.env.NODE_ENV === 'development';
-
 module.exports = {
     entry: { 
         main: './src/index.js' 
@@ -30,13 +29,25 @@ module.exports = {
                   'postcss-loader'
                 ]
                },
-    
                {
-                test: /\.(ttf|eot|svg|png|jpg|gif|ico|woff|woff2)(\?v=[0-9]\.[0-9]\.[0-9])?$/i,
+                test: /\.(eot|svg|png|jpg|gif|ico)(\?v=[0-9]\.[0-9]\.[0-9])?$/i,
                 use: [
                   {
                     loader: "file-loader",
                     options: {
+                      outputPath: './images/',
+                      esModule: false,
+                    },
+                  },
+                ],
+              },
+              {
+                test: /\.(ttf|woff|woff2)(\?v=[0-9]\.[0-9]\.[0-9])?$/i,
+                use: [
+                  {
+                    loader: "file-loader",
+                    options: {
+                      outputPath: './fonts/',
                       esModule: false,
                     },
                   },
@@ -48,16 +59,19 @@ module.exports = {
                   {
                     loader: "image-webpack-loader",
                     options: {
-                      name: "./images/[path][name].[ext]",
+                      name: "[path][chunkhash].[ext]",
                       bypassOnDebug: true,
-                      disable: true,
-                    }
-                  }
-                ],}],  },
+                      disable: false,
+                    },
+                  },
+                ],
+              },
+            ],
+          },
            
         plugins: [
           new MiniCssExtractPlugin({
-            filename: "./index.css",
+            filename: "./[chunkhash].css",
           }),
           new OptimizeCssAssetsPlugin({
             assetNameRegExp: /\.css$/g,
@@ -79,7 +93,6 @@ module.exports = {
         ],
 }
 
-// /\.(ttf|eot|svg|png|jpg|gif|ico)(\?v=[0-9]\.[0-9]\.[0-9])?$/
 
 
 
