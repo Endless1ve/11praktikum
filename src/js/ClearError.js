@@ -1,6 +1,6 @@
 'use strict'
 
-class ClearError {
+export default class ClearError {
 
     constructor(element) {
         this.elem = element;

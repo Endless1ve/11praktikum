@@ -1,5 +1,13 @@
 'use strict'
-
+import "./style.css";
+import Api from './js/Api.js';
+import Card from './js/Card.js';
+import CardList from './js/CardList.js';
+import ClearError from './js/ClearError.js';
+import DefaultValueForm from './js/DefaultValueForm.js';
+import FormValidator from './js/FormValidator.js';
+import Popup from './js/Popup.js';
+import UserInfo from './js/UserInfo.js';
 const placeList = document.querySelector('.places-list');
 const addCardButton = document.querySelector('.user-info__button');
 const editButton = document.querySelector('.user-info__edit');
