@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mesto</title>
-    <link rel="stylesheet" href="./pages/index.css">
+    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
 </head>
 
 <body>
     <div class="root">
         <header class="header root__section">
-            <img src="./images/logo.svg" alt="mesto logo" class="logo">
+            <img src="<%=require('./images/logo.svg')%>" alt="mesto logo" class="logo">
         </header>
         <div class="profile root__section">
             <div class="user-info">
@@ -26,11 +26,10 @@
             </div>
         </div>
         <div class="places-list root__section">
-            <!--Тут находятся карточки созданные через js-->
         </div>
         <div class="popup popup_add-card">
             <div class="popup__content popup__content_add-card">
-                <img src="./images/close.svg" alt="" class="popup__close popup__close_add-card">
+                <img src="<%=require('./images/close.svg')%>" alt="" class="popup__close popup__close_add-card">
                 <h3 class="popup__title popup__title_add-card">Новое место</h3>
                 <form class="popup__form popup__form_add-card" name="addCard">
                     <input type="text" name="name" class="popup__input popup__input_type_name_add-card" placeholder="Название" minlength="2" maxlength="30" required>
@@ -43,7 +42,7 @@
         </div>
         <div class="popup popup_edit-user-info">
             <div class="popup__content popup__content_edit-user-info">
-                <img src="./images/close.svg" alt="" class="popup__close popup__close_edit-user-info">
+                <img src="<%=require('./images/close.svg')%>" alt="" class="popup__close popup__close_edit-user-info">
                 <h3 class="popup__title popup__title_edit-user-info">Редактировать профиль</h3>
                 <form class="popup__form popup__form_edit-user-info" name="editProfile">
                     <input type="text" name="name" class="popup__input popup__input_type_name_edit" placeholder="Имя" minlength="2" maxlength="30" required>
@@ -57,12 +56,12 @@
         <div class="popup popup_opening-image">
             <div class="popup__image">
                 <img src="" alt="" class="popup__content_opening-image popup__window-image">
-                <img src="./images/close.svg" alt="" class="popup__close popup__close_opening-image">
+                <img src="<%=require('./images/close.svg')%>" alt="" class="popup__close popup__close_opening-image">
             </div>
         </div>
         <div class="popup popup_avatar-card">
             <div class="popup__content popup__content_avatar-card">
-                <img src="./images/close.svg" alt="" class="popup__close popup__close_avatar-card">
+                <img src="<%=require('./images/close.svg')%>" alt="" class="popup__close popup__close_avatar-card">
                 <h3 class="popup__title popup__title_avatar-card">Новое место</h3>
                 <form class="popup__form popup__form_avatar-card" name="avatarCard">
                     <input type="text" name="link" class="popup__input popup__input_type_link-url_avatar-card" placeholder="Ссылка на картинку" pattern="(^https?:\/\/)?[a-z0-9~_\-\.]+\.[a-z]{1,9}[aA-zZ0-9~_\-\./?=&]+" required>
@@ -71,15 +70,8 @@
                 </form>
             </div>
         </div>
-        <script src='./js/Api.js'></script>
-        <script src='./js/Popup.js'></script>
-        <script src='./js/CardList.js'></script>
-        <script src='./js/DefaultValueForm.js'></script>
-        <script src='./js/ClearError.js'></script>
-        <script src='./js/UserInfo.js'></script>
-        <script src='./js/FormValidator.js'></script>
-        <script src='./js/Card.js'></script>
-        <script src='./js/script.js'></script>
+        <script src="<%=htmlWebpackPlugin.files.js %>"></script>
+        </div>  
 </body>
 
 </html>

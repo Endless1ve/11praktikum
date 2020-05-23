@@ -1,6 +1,6 @@
 'use strict'
 
-class DefaultValueForm {
+export default class DefaultValueForm {
     constructor(editName, editAbout) {
         this.editName = editName;
         this.editAbout = editAbout;

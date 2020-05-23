@@ -1,6 +1,6 @@
 'use strict'
 
-class Card {
+export default class Card {
     constructor(dataCard, api) {
         this.api = api;
         this.dataCard = dataCard;
