@@ -57,7 +57,7 @@ const validityFormAdd = new FormValidator(newForm, addButton, validateStringErro
 const validityFormEdit = new FormValidator(editForm, submitButton, validateStringError);
 const validityFormAvatar = new FormValidator(avatarForm, avatarButton, validateStringError);
 //
-const baseURL = 'https://praktikum.tk/cohort10';
+const baseURL = 'http://nomoreparties.co/cohort10';
 const _token = 'fb1a6f61-8bda-4b8c-a8a2-9caef6590fe7';
 const api = new Api(baseURL, _token);
 const initialCards = api.takeCards();
